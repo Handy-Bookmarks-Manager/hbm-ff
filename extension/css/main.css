@@ -1,3 +1,9 @@
+* {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
 body {
   font-family: serif, "Times New Roman", Times;
 }
@@ -19,35 +25,7 @@ fieldset {
   margin-top: 25px;
 }
 
-h1 {
-  font-size: 1.2em;
-  margin: 0.6em 0;
-}
-
-div#users-contain {
-  width: 350px;
-  margin: 20px 0;
-}
-
-div#users-contain table {
-  margin: 1em 0;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-div#users-contain table td,
-div#users-contain table th {
-  border: 1px solid #eee;
-  padding: 0.6em 10px;
-  text-align: left;
-}
-
 .ui-dialog .ui-state-error {
-  padding: 0.3em;
-}
-
-.validateTips {
-  border: 1px solid transparent;
   padding: 0.3em;
 }
 
@@ -55,12 +33,3 @@ div#users-contain table th {
   background-color: rgb(132, 231, 52);
 }
 
-#ft-id-2 {
-  border: none;
-}
-
-* {
-  -webkit-box-sizing: content-box;
-  -moz-box-sizing: content-box;
-  box-sizing: content-box;
-}
