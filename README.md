@@ -1,9 +1,10 @@
-<p align="center">
+  <p align="center">
+    <img  alt="logo" src="extension/icons/logo-star-colored.png" width="48" height="48" />
+  </p>
 
   <h3 align="center">Handy Bookmarks Manager</h3>
 
   <p align="center">
-  ![logo]<img align="center" src="extension/icons/logo-star-colored.png" width="48" height="48">
    Extension for Firefox to manage bookmarks
     <br />
     <br />
@@ -11,23 +12,26 @@
     ·
     <a href="https://github.com/Handy-Bookmarks-Manager/hbm-ff/issues">Request Feature</a>
   </p>
-</p>
+
 <hr />
+
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
   <a href="https://github.com/Handy-Bookmarks-Manager/hbm-ff/graphs/commit-activity" target="_blank">
     <img alt="Maintenance" src="https://img.shields.io/badge/Maintained%3F-yes-green.svg" />
   </a>
-  <a href="https://github.com/Handy-Bookmarks-Manager/hbm-ff/blob/master/LICENSE" target="_blank">
+  <a href="https://github.com/Handy-Bookmarks-Manager/hbm-ff/blob/master/LICENSE.txt" target="_blank">
     <img alt="License: GPLv3" src="https://img.shields.io/github/license/Handy-Bookmarks-Manager/handy-bookmarks-manager" />
   </a>
 </p>
 
 ### About The Project
 
-![screenshot][.github/images/ss1.png]
-![screenshot][.github/images/ss2.png]
-![screenshot][.github/images/ss3.png]
+<br />
+
+<img alt="screenshot" src=".github/images/ss1.png" />
+<img alt="screenshot" src=".github/images/ss2.png" />
+<img alt="screenshot" src=".github/images/ss3.png" />
 
 #### Built With
 
@@ -60,7 +64,7 @@ Contributions, issues and feature requests are welcome!<br />Feel free to check 
 
 ### Author
 
-👤 **Thusara Senanayake <gh@thusara.slmail.me> (http://thusarasenanayake.github.io)**
+👤 **Thusara Senanayake <gh@thusara.slmail.me> (https://thusarasenanayake.github.io)**
 
 -   Github: [@Handy-Bookmarks-Manager](https://github.com/Handy-Bookmarks-Manager)
 
