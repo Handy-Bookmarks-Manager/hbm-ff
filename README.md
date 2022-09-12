@@ -3,6 +3,7 @@
   <h3 align="center">Handy Bookmarks Manager</h3>
 
   <p align="center">
+  ![logo]<img align="center" src="extension/icons/logo-star-colored.png" width="48" height="48">
    Extension for Firefox to manage bookmarks
     <br />
     <br />
@@ -24,9 +25,9 @@
 
 ### About The Project
 
-![screenshot][https://raw.githubusercontent.com/handy-bookmarks-manager/hbm-ff/main/.github/images/ss1.png]
-![screenshot][https://raw.githubusercontent.com/handy-bookmarks-manager/hbm-ff/main/.github/images/ss2.png]
-![screenshot][https://raw.githubusercontent.com/handy-bookmarks-manager/hbm-ff/main/.github/images/ss3.png]
+![screenshot][.github/images/ss1.png]
+![screenshot][.github/images/ss2.png]
+![screenshot][.github/images/ss3.png]
 
 #### Built With
 
