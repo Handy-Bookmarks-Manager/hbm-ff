@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../icons/favicon-16x16.png">
+  <link rel="stylesheet" href="../css/jquery-ui.css" />
+  <link rel="stylesheet" href="../css/bootstrap.min.css" />
+  <link rel="stylesheet" href="../css/main.css" />
+
+  <title>Handy Bookmarks Manager</title>
+  <script type="module" src="./main.js"></script>
+
+  <style>
+    body {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row sticky-top bg-light" style="z-index:1">
+      <div class="col m-2 d-flex gap-3 p-2">
+        <div class="btn-group" role="group">
+          <button class="btn shadow-none btn-outline-primary btn-sm" id="expander">Expand All</button>
+        </div>
+        <div class="btn-group" role="group">
+          <button id="add" type="button" class="btn shadow-none btn-outline-primary btn-sm">Add</button>
+          <button id="delete" type="button" class="btn shadow-none btn-outline-danger btn-sm">Delete</button>
+        </div>
+        <div class="btn-group" role="group">
+          <button type="button" class="btn shadow-none btn-outline-primary btn-sm" id="get-server-status">Get server
+            status</button>
+          <button type="button" class="btn shadow-none btn-outline-primary btn-sm" id="get-favicons">Get
+            favicon</button>
+          <button type="button" class="btn shadow-none btn-outline-primary btn-sm" id="get-title">Get title</button>
+        </div>
+        <div class="btn-group" role="group">
+          <button type="button" class="btn shadow-none btn-outline-primary btn-sm" id="settings">Settings</button>
+        </div>
+      </div>
+
+      <div class="col-8">
+        <div class="input-group mb-3">
+          <input type="search" class="form-control" placeholder="Search bookmarks" id='search' />
+          <button id="clear-search" class="btn shadow-none btn-outline-primary">✘</button>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="controlgroup input-group" id="filter-control">
+          <select id="filter-type">
+            <option selected>None</option>
+            <option>Added last week</option>
+            <option>Duplicate items</option>
+            <option>404 pages</option>
+          </select>
+          <button class="btn shadow-none btn-outline-primary" type="button">Filter</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <section>
+        <table id="bookmarks-table">
+          <colgroup>
+            <col width="24px">
+            </col>
+            <col width="40px">
+            </col>
+            <col width="42%">
+            </col>
+            <col width="30%">
+            </col>
+            <col width="8%">
+            </col>
+            <col width="10%">
+            </col>
+            <col width="10%">
+            </col>
+          </colgroup>
+          <thead>
+            <tr>
+              <th></th>
+              <th>#</th>
+              <th>Name</th>
+              <th>URL</th>
+              <th>Date added</th>
+              <th style="color: rgb(30, 140, 100)">Status</th>
+              <th style="color: rgb(30, 140, 100)">Last updated</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+    <hr>
+
+    <footer class="sticky-bottom py-3">
+      <h3 class=" fw-light text-center"><img class="p-2 mb-1" height="20" width="20"
+          src="../icons/logo-star-colored.png" />Handy
+        Bookmarks Manager</h3>
+      <div class="text-center">
+        <a href="https://ko-fi.com/thusarasenanayake" target="_blank"
+          class="link-secondary px-1 text-decoration-none"><img class="text-center px-1 mb-1" height="16" width="16"
+            src="../icons/kofi.svg" />Buy Me A Coffee</a>
+        <a href="https://github.com/Handy-Bookmarks-Manager/hbm-ff/issues" target="_blank"
+          class="link-secondary px-1 text-decoration-none"><img class="text-center px-1 mb-1" height="16" width="16"
+            src="../icons/github.svg" />Report an issue</a>
+      </div>
+    </footer>
+  </div>
+
+  <!-- hidden widgets -->
+
+  <div id="add-bm-dialog" title="Add bookmark">
+    <div class="control-method">
+      <label for="method-form">From a form</label>
+      <input type="radio" name="method" id="method-form" checked>
+      <label for="method-file">From a file</label>
+      <input type="radio" name="method" id="method-file">
+    </div>
+    <form>
+      <fieldset>
+        <div class="ui-widget" id="add-bm-error">
+          <div class="ui-state-error ui-corner-all">
+            <p><span class="ui-icon ui-icon-alert" style="float: left; margin:1em 1em 0  0 ;"></span>
+              <strong>Error: </strong><span id="add-bm-error-msg"></span>
+            </p>
+          </div>
+        </div>
+        <div id="add-bm-input">
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name" class="text ui-widget-content ui-corner-all">
+          <label for="url">URL</label>
+          <input type="url" name="url" id="url" class="text ui-widget-content ui-corner-all">
+        </div>
+        <label>Location</label>
+        <div id="add-bm-accordion" selected-location="menu________">
+          <h4>Bookmarks Menu</h4>
+          <div id="add-bm-tree"></div>
+        </div>
+      </fieldset>
+    </form>
+    <div class="pt-4" id="add-bm-file">
+      <input class="ui-button ui-widget ui-corner-all" type="file" id="bm-text-file">
+    </div>
+  </div>
+
+  <div id="edit-bm-dialog" title="Edit bookmark">
+    <form>
+      <fieldset>
+        <div class="ui-widget" id="edit-bm-error">
+          <div class="ui-state-error ui-corner-all">
+            <p><span class="ui-icon ui-icon-alert" style="float: left; margin:1em 1em 0  0 ;"></span>
+              <strong>Error: </strong><span id="edit-bm-error-msg"></span>
+            </p>
+          </div>
+        </div>
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" class="text ui-widget-content ui-corner-all">
+        <label for="url">URL</label>
+        <input type="url" name="url" id="url" class="text ui-widget-content ui-corner-all">
+        <label>Location</label>
+        <div id="edit-bm-accordion" selected-location="menu________">
+          <h4>Bookmarks Menu</h4>
+          <div id="edit-bm-tree"></div>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+
+  <div id="delete-bm-dialog" title="Delete bookmarks">
+    <p><span class="ui-icon ui-icon-alert" style="float:left; margin:12px 12px 40px 0;"></span>Selected bookmarks will
+      be permanently deleted and cannot be recovered. Are you sure?</p>
+  </div>
+  <div id="delete-bm-dialog-context" title="Delete bookmarks">
+    <p><span class="ui-icon ui-icon-alert" style="float:left; margin:12px 12px 40px 0;"></span>Selected bookmarks will
+      be permanently deleted and cannot be recovered. Are you sure?</p>
+  </div>
+
+  <div id="fetch-progress" title="Refreshing data">
+    <div id="progressbar"></div>
+  </div>
+
+  <div id="add-folder-dialog" title="Add Folder">
+    <input type="text" id="add-folder-name" class="text ui-widget-content ui-corner-all">
+  </div>
+
+  <div id="message-dialog" title="Message">
+    <p></p>
+  </div>
+  <div id="error-dialog" title="Error">
+    <p></p>
+  </div>
+
+  <div id="settings-dialog" title="Settings">
+    <fieldset>
+      <label for="favicon-src">Fetch favicons from:</label>
+      <select id="favicon-src" class="select-menu">
+        <option selected="selected">Browser</option>
+        <option>Google</option>
+      </select>
+    </fieldset>
+
+    <fieldset>
+      <label>Fetch titles from:</label>
+      <select id="title-src" class="select-menu">
+        <option selected="selected">Browser</option>
+        <option>textance.herokuapp.com</option>
+      </select>
+    </fieldset>
+
+    <fieldset>
+      <button class="btn btn-danger" id="clear-ext-data">Clear extension data</button>
+    </fieldset>
+  </div>
+
+</body>
+
+</html>

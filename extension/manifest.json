@@ -1,0 +1,31 @@
+{
+    "manifest_version": 2,
+    "name": "Handy Bookmarks Manager",
+    "version": "1.0.0",
+    "description": "Bookmarks Manager with additional features",
+    "developer": {
+        "name": "Thusara Senanayake",
+        "url": "https://thusarasenanayake.github.io"
+    },
+    "homepage_url": "https://github.com/Handy-Bookmarks-Manager/hbm-ff",
+    "icons": {
+        "48": "icons/logo48x48.png",
+        "96": "icons/logo96x96.png"
+    },
+    "permissions": [
+        "tabs",
+        "bookmarks",
+        "storage",
+        "<all_urls>"
+    ],
+    "browser_action": {
+        "default_icon": "icons/logo48x48.png",
+        "default_title": "Handy Bookmarks Manager"
+    },
+    "background": {
+        "scripts": [
+            "background-script.js"
+        ],
+        "persistent": false
+    }
+}
