@@ -62,6 +62,27 @@ Contributions, issues and feature requests are welcome!<br />Feel free to check 
 -   ~~multiple favicon renders on search~~
 -   checkboxes not showing after 'Expand All'
 
+### For Developers
+
+> Developed on : Ubuntu 22.04 LTS
+
+1. Clone the repo
+    ```sh
+    git clone https://github.com/Handy-Bookmarks-Manager/hbm-ff.git
+    ```
+2. Install NPM packages
+    ```sh
+    npm install
+    ```
+3. Run Development environment
+    ```sh
+     npm run dev
+    ```
+4. Build
+    ```sh
+     npm run build
+    ```
+
 ### Author
 
 👤 **Thusara Senanayake <gh@thusara.slmail.me> (https://thusarasenanayake.github.io)**
