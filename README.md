@@ -27,6 +27,16 @@
 
 ### About The Project
 
+<b> Features </b>
+
+<ul>
+  <li>Add bookmarks from a text file</li>
+  <li>Update/repair titles of your bookmarks</li>
+  <li>Filter 404 (not found) pages</li>
+  <li>Filter Duplicate bookmarks</li>
+  <li>List server status</li>
+</ul>
+
 <br />
 
 <img alt="screenshot" src=".github/images/ss1.png" />
@@ -43,6 +53,12 @@
 #### Available Shortcuts
 
 -   'f2' | 'shift+click' | 'mac+enter' - to edit
+
+### Install
+
+ <a href="https://addons.mozilla.org/en-US/firefox/addon/handy-bookmarks-manager" target="_blank">
+     <img  alt="get add-on" src="https://extensionworkshop.com/assets/img/documentation/publish/get-the-addon-129x45px.8041c789.png"  />
+  </a>
 
 ### Contributing
 
@@ -91,4 +107,4 @@ Contributions, issues and feature requests are welcome!<br />Feel free to check 
 
 ### License
 
-This project is licensed under the terms of the [GPLv3](https://github.com/Handy-Bookmarks-Manager/hbm-ff/blob/master/LICENSE).
+This project is licensed under the terms of the [GPLv3](https://github.com/Handy-Bookmarks-Manager/hbm-ff/blob/master/LICENSE.txt).

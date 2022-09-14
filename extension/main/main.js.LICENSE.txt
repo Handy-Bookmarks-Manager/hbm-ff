@@ -5,7 +5,7 @@
  * https://github.com/Handy-Bookmarks-Manager/hbm-ff
  *
  * Released under the GNU General Public License v3.0 license
- * https://github.com/Handy-Bookmarks-Manager/hbm-ff/blob/main/LICENSE
+ * https://github.com/Handy-Bookmarks-Manager/hbm-ff/blob/main/LICENSE.txt
  *
  * @version 1.0.0
  * @date 2022-09-08T05:15:46.440Z
